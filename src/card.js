@@ -317,10 +317,13 @@ Card.transform = function (element, x, y, r) {
  * @param {HTMLElement} element The target element.
  */
 Card.appendToParent = function (element) {
-    return;
     var parent = element.parentNode,
         siblings = dom.elementChildren(parent),
         targetIndex = siblings.indexOf(element);
+
+    if (element) {
+      return;
+    }
 
     if (targetIndex + 1 !== siblings.length) {
         parent.removeChild(element);
