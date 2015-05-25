@@ -45,7 +45,8 @@ Card = function Card (stack, targetElement) {
     eventEmitter = Sister();
     springSystem = stack.springSystem();
     springThrowIn = springSystem.createSpring(250, 10);
-    springThrowOut = springSystem.createSpring(50, 7); //springSystem.createSpring(500, 20);
+    springThrowOut = springSystem.createSpring(50, 7);
+
     lastThrow = {};
     lastTranslate = {x: 0, y: 0};
 
